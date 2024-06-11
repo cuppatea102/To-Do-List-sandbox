@@ -1,0 +1,23 @@
+{
+  "name": "to-do-list",
+  "version": "0.0.0",
+  "description": "Creating and editing a To-Do List",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "live-server ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/WadeT2000/To-Do-List.git"
+  },
+  "author": "Wade Townley & Thomas Avende",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WadeT2000/To-Do-List/issues"
+  },
+  "homepage": "https://github.com/WadeT2000/To-Do-List#readme",
+  "dependencies": {
+    "live-server": "^1.2.2"
+  }
+}
