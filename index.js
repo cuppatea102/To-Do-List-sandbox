@@ -52,19 +52,15 @@ document.getElementById('addTodo').addEventListener('click', function() {
     }
   });
 
-// document.getElementById('todoList').addEventListener('change', function(event) {
-//     if (event.target && event.target.type === 'checkbox') {
-//       changeOnChecked(event);
-//     }
-//   });
-  
   function changeOnChecked(event) {
     const isChecked = event.target.checked;
  isChecked ? event.target.closest('li').style.textDecoration = 'line-through' : event.target.closest('li').style.textDecoration = 'none';
-  }
+  };
+  //creates a line through the list element when checkbox is checked and reverts it when 
+  // unchecked
 
 
  function deleteToDo(event) {
  const element = event.target.closest('li');
- element.remove(); // Removes the div with the 'div-02' id
- }
+ element.remove(); // Removes the 'li' element next to the button
+ };
