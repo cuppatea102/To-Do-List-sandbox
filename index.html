@@ -13,10 +13,12 @@
     <button id="addTodo">Add To-Do</button>
     <ul id="todoList">
       <li id="test">
-      <label id="store"><input type="checkbox" id="store" name="To-Do" value="store" />Go to store</label>
-      </li>
+      <label id="store"><input type="checkbox" id="store" name="To-Do" value="store" onclick='changeOnChecked(event)'>Go to store</label>
+      <button id="delete" onclick="deleteToDo(event)">Remove Item</button>
+    </li> 
       <li>
-      <label id="store"><input type="checkbox" id="cookware" name="To-Do" value="cookware">Gather mixing bowls, measuring cups, and measuring spoons</label>
+      <label id="store"><input type="checkbox" id="cookware" name="To-Do" value="cookware" onclick='changeOnChecked(event)'>Gather mixing bowls, measuring cups, and measuring spoons</label>
+      <button id="delete" onclick="deleteToDo(event)">Remove Item</button>
       </li>
     </ul>
     <script src="./index.js"></script>

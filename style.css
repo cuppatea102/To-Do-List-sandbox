@@ -6,6 +6,8 @@ h1 {
 .checkbox {
     align-items: left;
 }
-test {
-    color: blue;
+
+
+#delete {
+    float: right;
 }
