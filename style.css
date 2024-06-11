@@ -1,13 +1,54 @@
 h1 {
-    color: blue;
+     color: blanchedalmond;
     text-align: center;
-    text-decoration: none;
-}
-.checkbox {
-    align-items: left;
+    text-decoration: underline;
+    font-style: italic;
+    background-color: darkcyan;
+    font-size: 22px;
+    font-family: Papyrus; 
+
+    
 }
 
+#newinput {
+    text-align: center;
+}
+
+
+
+#store {
+    color: blue;
+}
+
+#lists {
+    height: 30px;
+}
+
+#todoList {
+    font-size: 20px;
+    list-style: "\1F44D";  
+    padding-left: 1;
+}
+
+#deleteHeader {
+    text-align: right;
+    color: #999999;
+}
 
 #delete {
     float: right;
+    margin-left: -100px;
+    background-color: #999999;
+    border: solid || white;
+    color: white;
+    padding: 3px 7px;
+    text-align: right;
+    text-decoration: bold;
+    display: inline-block;
+    font-size: 10px;
 }
+
+body {
+    background-image: url(/Pictures/"img_tree.gif"), url(/Pictures/"paper.gif");
+    background-color: #cccccc;
+  }
