@@ -5,44 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./style.css">
-    <title>To-Do List</title>
+    <title>Pokemon Team Builder</title>
 
-<a  <img width="259" height="50" src="https://www.galvanize.com/wp-content/uploads/2022/11/galvanize_logo_small-scale_full-color_dark-background.png" class="skip-lazy logo-desktop" alt="Galvanize homepage" aria-label="Galvanize homepage" decoding="async" srcset="https://www.galvanize.com/wp-content/uploads/2022/11/galvanize_logo_small-scale_full-color_dark-background.png 315w, https://www.galvanize.com/wp-content/uploads/2022/11/galvanize_logo_small-scale_full-color_dark-background-232x45.png 232w, https://www.galvanize.com/wp-content/uploads/2022/11/galvanize_logo_small-scale_full-color_dark-background-150x29.png 150w, https://www.galvanize.com/wp-content/uploads/2022/11/galvanize_logo_small-scale_full-color_dark-background-250x48.png 250w" sizes="(max-width: 259px) 100vw, 259px"><img width="259" height="50" src="https://www.galvanize.com/wp-content/uploads/2022/11/galvanize_logo_full-color_light-background-311x60.png" class="skip-lazy logo-mobile" alt="Galvanize mobile homepage" aria-label="Galvanize mobile homepage" decoding="async" srcset="https://www.galvanize.com/wp-content/uploads/2022/11/galvanize_logo_full-color_light-background-311x60.png 311w, https://www.galvanize.com/wp-content/uploads/2022/11/galvanize_logo_full-color_light-background-768x148.png 768w, https://www.galvanize.com/wp-content/uploads/2022/11/galvanize_logo_full-color_light-background-992x191.png 992w, https://www.galvanize.com/wp-content/uploads/2022/11/galvanize_logo_full-color_light-background-576x111.png 576w, https://www.galvanize.com/wp-content/uploads/2022/11/galvanize_logo_full-color_light-background-600x116.png 600w, https://www.galvanize.com/wp-content/uploads/2022/11/galvanize_logo_full-color_light-background-233x45.png 233w, https://www.galvanize.com/wp-content/uploads/2022/11/galvanize_logo_full-color_light-background-150x29.png 150w, https://www.galvanize.com/wp-content/uploads/2022/11/galvanize_logo_full-color_light-background-1000x193.png 1000w, https://www.galvanize.com/wp-content/uploads/2022/11/galvanize_logo_full-color_light-background-250x48.png 250w, https://www.galvanize.com/wp-content/uploads/2022/11/galvanize_logo_full-color_light-background-750x145.png 750w, https://www.galvanize.com/wp-content/uploads/2022/11/galvanize_logo_full-color_light-background.png 1385w" sizes="(max-width: 259px) 100vw, 259px"></a>
 
     
   </head>
   <body>
-    <h1>To-Do List</h1>
+    <h1>Pokemon Team Builder</h1>
     <div id="newinput">
-    <input type="text" id="newTodo" placeholder="New to-do item">
-    <button id="addTodo">Add To-Do</button>
+    <input type="text" id="newTodo" placeholder="Enter Pokemon Name">
+    <button id="addPokemon">Add Pokemon</button>
 
 
 
     
   </div>
     <h2 id="deleteHeader">Delete Buttons:</h2>
-    <ul id="todoList">
-      <li id="lists">
-        <label id="store"><input type="checkbox" id="store" name="To-Do" value="store" onclick='changeOnChecked(event)'>Go to store</label>
+    <ul id="fullTeam">
+      <li id="team">
+        <label id="Starter">Ampharos</label>
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/181.png" alt="Amphy">
         <button id="delete" onclick="deleteToDo(event)">X</button>
-      </li> 
-      <li id="lists">
-        <label id="store"><input type="checkbox" id="cookware" name="To-Do" value="cookware" onclick='changeOnChecked(event)'>Gather mixing bowls, measuring cups, and measuring spoons</label>
-        <button id="delete" onclick="deleteToDo(event)">X</button>
-      </li>
-      <li id="lists">
-        <label id="store"><input type="checkbox" id="cookware" name="To-Do" value="cookware" onclick='changeOnChecked(event)'>Go home</label>
-        <button id="delete" onclick="deleteToDo(event)">X</button>
-        </li>
-      <li id="lists">
-        <label id="store"><input type="checkbox" id="cookware" name="To-Do" value="cookware" onclick='changeOnChecked(event)'>Read pancake instructions</label>
-        <button id="delete" onclick="deleteToDo(event)">X</button>
-      </li>
-      <li id="lists">
-        <label id="store"><input type="checkbox" id="cookware" name="To-Do" value="cookware" onclick='changeOnChecked(event)'>Make and eat pancakes</label>
-        <button id="delete" onclick="deleteToDo(event)">X</button>
-      </li>
     </ul>
     <script src="./index.js"></script>
   </body>
