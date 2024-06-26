@@ -1,7 +1,7 @@
 document.getElementById('addPokemon').addEventListener('click', function() {
-    var searchText = document.getElementById('newPokemon').value;
+    var rawSearchText = document.getElementById('newPokemon').value;
     //text box value
-    
+    var searchText = rawSearchText.toLowerCase();
 fetch(`https://pokeapi.co/api/v2/pokemon/${searchText}`)
 //get a response object
 
@@ -36,7 +36,8 @@ fetch(`https://pokeapi.co/api/v2/pokemon/${searchText}`)
       newSprite.src = pokemonData.sprites.front_default
 
       //Puts pokemon name in the list
-      newLabel.appendChild(document.createTextNode(' ' + searchText));
+      capitalizedName = searchText.charAt(0).toUpperCase() + searchText.slice(1);
+      newLabel.appendChild(document.createTextNode(' ' + capitalizedName));
       //newLabel = <label><input type="checkbox" name="To-Do">'example'</label>
 
       newListItem.appendChild(newDeleteButton);
