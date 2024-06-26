@@ -1,5 +1,5 @@
 document.getElementById('addPokemon').addEventListener('click', function() {
-    var searchText = document.getElementById('newTodo').value;
+    var searchText = document.getElementById('newPokemon').value;
     //text box value
     
 fetch(`https://pokeapi.co/api/v2/pokemon/${searchText}`)
@@ -22,9 +22,9 @@ fetch(`https://pokeapi.co/api/v2/pokemon/${searchText}`)
 
      var newDeleteButton = document.createElement('button');
       newDeleteButton.id = 'delete';
-      newDeleteButton.onclick = deleteToDo;
+      newDeleteButton.onclick = removePokemon;
       newDeleteButton.appendChild(document.createTextNode('X'));
-      //<button id="delete" onclick = "deleteToDo(event)">'X'</button>
+      //<button id="delete" onclick = "removePokemon(event)">'X'</button>
 
       // Create a new label
       var newLabel = document.createElement('label');
@@ -40,11 +40,11 @@ fetch(`https://pokeapi.co/api/v2/pokemon/${searchText}`)
       //newLabel = <label><input type="checkbox" name="To-Do">'example'</label>
 
       newListItem.appendChild(newDeleteButton);
-      //<li><button id="delete" onclick = "deleteToDo(event)">'X'</button></li>
+      //<li><button id="delete" onclick = "removePokemon(event)">'X'</button></li>
     
       // Append the label to the list item
       newListItem.appendChild(newLabel);
-      // <li><label><input type="checkbox" name="To-Do">'example'</label><li><button id="delete" onclick = "deleteToDo(event)">'X'</button></li></li>
+      // <li><label><input type="checkbox" name="To-Do">'example'</label><li><button id="delete" onclick = "removePokemon(event)">'X'</button></li></li>
   
 
       newListItem.appendChild(newSprite);
@@ -62,7 +62,7 @@ fetch(`https://pokeapi.co/api/v2/pokemon/${searchText}`)
 })
 
 
- function deleteToDo(event) {
+ function removePokemon(event) {
  const element = event.target.closest('li');
  element.remove(); // Removes the 'li' element next to the button
  };

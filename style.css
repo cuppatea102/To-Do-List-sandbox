@@ -1,14 +1,19 @@
 h1 {
-     color: blanchedalmond;
+     color: rgb(135, 200, 211);
     text-align: center;
     text-decoration: underline;
     font-style: italic;
     background-color: darkcyan;
     font-size: 22px;
     font-family: Papyrus; 
+    border-style: solid;
+    border-width: 2px;
+    border-color:darkblue;
+    border-radius: 3px;
 
     
 }
+
 
 #newinput {
     text-align: center;
@@ -24,10 +29,13 @@ h1 {
     height: 30px;
 }
 
-#todoList {
-    font-size: 20px;
-    list-style: "\1F44D";  
+#fullTeam {
+    
+    font-size: 14px;
+    font-size: 200%;
+    list-style-image: none;
     padding-left: 1;
+    border: solid || white;
 }
 
 #deleteHeader {
@@ -49,6 +57,7 @@ h1 {
 }
 
 body {
-    background-image: url(/Pictures/"img_tree.gif"), url(/Pictures/"paper.gif");
+    background-size: 200%;
+    background-image: url(./images/pokemon_landscape_by_brainblower_d8i3udq-fullview.jpg);
     background-color: #cccccc;
   }

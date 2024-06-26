@@ -12,8 +12,8 @@
   </head>
   <body>
     <h1>Pokemon Team Builder</h1>
-    <div id="newinput">
-    <input type="text" id="newTodo" placeholder="Enter Pokemon Name">
+    <div id="newInput">
+    <input type="text" id="newPokemon" placeholder="Enter Pokemon Name">
     <button id="addPokemon">Add Pokemon</button>
 
 
@@ -23,9 +23,10 @@
     <h2 id="deleteHeader">Delete Buttons:</h2>
     <ul id="fullTeam">
       <li id="team">
-        <label id="Starter">Ampharos</label>
         <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/181.png" alt="Amphy">
-        <button id="delete" onclick="deleteToDo(event)">X</button>
+        <label id="Starter">Ampharos</label>
+        
+        <button id="delete" onclick="removePokemon(event)">X</button>
     </ul>
     <script src="./index.js"></script>
   </body>
