@@ -1,8 +1,20 @@
 document.getElementById('addPokemon').addEventListener('click', function() {
-    var newTodoText = document.getElementById('newTodo').value;
+    var searchText = document.getElementById('newTodo').value;
     //text box value
     
-    if (newTodoText.trim() !== '') {
+fetch(`https://pokeapi.co/api/v2/pokemon/${searchText}`)
+//get a response object
+
+.then(httpResponse => {
+  return httpResponse.json()
+  //pull out the json from the response object
+ })
+ .then(pokemonData => {
+ //now we have access to the pokemon's data
+  console.log(pokemonData)
+ 
+
+    if (searchText.trim() !== '') {
       // Create a new list item
       var newListItem = document.createElement('li');
       newListItem.id = 'team'
@@ -20,9 +32,11 @@ document.getElementById('addPokemon').addEventListener('click', function() {
       //id formerly 'store'
       // <label></label>
   
+      var newSprite = document.createElement('img');
+      newSprite.src = pokemonData.sprites.front_default
 
       //Puts pokemon name in the list
-      newLabel.appendChild(document.createTextNode(' ' + newTodoText));
+      newLabel.appendChild(document.createTextNode(' ' + searchText));
       //newLabel = <label><input type="checkbox" name="To-Do">'example'</label>
 
       newListItem.appendChild(newDeleteButton);
@@ -32,14 +46,12 @@ document.getElementById('addPokemon').addEventListener('click', function() {
       newListItem.appendChild(newLabel);
       // <li><label><input type="checkbox" name="To-Do">'example'</label><li><button id="delete" onclick = "deleteToDo(event)">'X'</button></li></li>
   
+
+      newListItem.appendChild(newSprite);
+
       // Append the list item to the to-do list
       document.getElementById('fullTeam').appendChild(newListItem);
-    //  <ul id="todoList">
-    //<li><label id="store"><input type="checkbox" id="store" name="To-Do" value="store" />Go to store</label></li>
-    //<li><label id="store"><input type="checkbox" id="cookware" name="To-Do" value="cookware" onclick='changeOnChecked()'>Gather mixing bowls, measuring cups, and measuring spoons</label></li>
-    //<li><label><input type="checkbox" name="To-Do">'example'</label></li>
-    //  </ul>
-
+    //  <ul id="fullTeam">
 
       // Clear the input field
       document.getElementById('newTodo').value = '';
@@ -47,7 +59,7 @@ document.getElementById('addPokemon').addEventListener('click', function() {
     }
   });
 
-
+})
 
 
  function deleteToDo(event) {
